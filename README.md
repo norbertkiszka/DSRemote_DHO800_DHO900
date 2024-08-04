@@ -4,17 +4,21 @@ DSRemote ported to work with Rigol DHO800 and DHO900 series. Currently at experi
 
 Tested only with DHO924S via network (with wifi) on Debian 12.5 Linux/GNU.
 
-## How to run from precompiled binary
+## How to run from precompiled binary (Debian)
 
 ```bash
+sudo apt-get update
+sudo apt-get install git qt5-default
 git clone https://github.com/norbertkiszka/DSRemote_DHO800_DHO900.git
 cd DSRemote_DHO800_DHO900
 ./dsremote
 ```
 
-## How to compile and install
+## How to compile and install (Debian)
 
 ```bash
+sudo apt-get update
+sudo apt-get install g++ make git qtbase5-dev-tools qtbase5-dev qt5-default
 git clone https://github.com/norbertkiszka/DSRemote_DHO800_DHO900.git
 cd DSRemote_DHO800_DHO900
 make -j4
