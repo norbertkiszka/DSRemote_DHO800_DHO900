@@ -27,12 +27,18 @@ dsremote
 ```
 
 
-## Detailed oscilloscopes list for SEO:
+## Detailed oscilloscopes list for SEO
 
 - Rigol DHO924S
 - Rigol DHO924
 - Rigol DHO914S
+- Rigol DHO914
+- Rigol DHO824
 - Rigol DHO814
 - Rigol DHO812
 - Rigol DHO804
 - Rigol DHO802
+
+## Other
+
+Improved firmware for DHO800 and DHO900 series: https://www.patreon.com/norbertkiszka/shop

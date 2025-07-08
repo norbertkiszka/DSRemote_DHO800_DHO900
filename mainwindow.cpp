@@ -221,7 +221,7 @@ void UI_Mainwindow::open_connection()
     goto OC_OUT_ERROR;
   }
 
-  if(strcmp(ptr, "RIGOL TECHNOLOGIES"))
+  if(strcmp(ptr, "RIGOL TECHNOLOGIES") && strcmp(ptr, "NK TECHNOLOGIES"))
   {
     snprintf(str, 1024, "Received an unknown identification string from device:\n\n%s\n ", device->buf);
     goto OC_OUT_ERROR;

@@ -109,10 +109,12 @@ void read_settings_thread::run()
       goto GDS_OUT_ERROR;
     }
 
+    // NK: DHO800/DHO900 app (scpi) hasn't implemented other BW limiters. "OFF" and "20M" responses are hardcoded (compiled C++).
     if(tmc_read() < 1)
     {
-      line = __LINE__;
-      goto GDS_OUT_ERROR;
+      //line = __LINE__;
+      //goto GDS_OUT_ERROR;
+		devparms->chanbwlimit[chn] = 0;
     }
 
     if(!strcmp(device->buf, "20M"))
@@ -129,8 +131,10 @@ void read_settings_thread::run()
         }
         else
         {
-          line = __LINE__;
-          goto GDS_OUT_ERROR;
+          //line = __LINE__;
+          //goto GDS_OUT_ERROR;
+			// NK: DHO800/DHO900 app (scpi) hasn't implemented other BW limiters. "OFF" and "20M" responses are hardcoded (compiled C++).
+			devparms->chanbwlimit[chn] = 0;
         }
 
     snprintf(str, 512, ":CHAN%i:COUP?", chn + 1);

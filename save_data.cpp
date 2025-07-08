@@ -87,7 +87,7 @@ void UI_Mainwindow::save_screenshot()
 
   scrn_thread->wait();
 
-  tmc_write(":DISP:DATA?");
+  tmc_write(":DISPlay:DATA?");
 
   save_data_thread get_data_thrd(0);
 
